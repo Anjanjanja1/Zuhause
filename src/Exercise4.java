@@ -62,15 +62,17 @@ public class Exercise4 {
         System.out.println("Enter a sentence: ");
         Scanner scanner = new Scanner(System.in);
         String word = scanner.nextLine();
-        int vowl = 0;
-        for (int i = word.length(); i <= word.length(); i++) {
-            if (word.equals("a") || word.equals("e") || word.equals("i") || word.equals("o") || word.equals("u")) {
-                vowl++;
-            } else {
-                System.out.println("This sentence has " + vowl + " vowels. Happy days!");
+        word = word.toLowerCase();
+        int countVowels = 0;
+        for (int i = 0; i < word.length(); i++) {
+            char ch = word.charAt(i);
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                countVowels++;
             }
         }
+        System.out.println("This sentence has " + countVowels + " vowels. Happy days!");
     }
+
 
     static void Factorial() {
         Scanner scanner = new Scanner(System.in);
@@ -84,5 +86,5 @@ public class Exercise4 {
         }
         System.out.println("The factorial of " + num + " is " + fac + ".");
     }
-
 }
+
