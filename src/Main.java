@@ -11,7 +11,9 @@ public class Main {
         //V11();
         //V12();
         //V13();
-
+        //V15();
+        //V16();
+        //V32();
     }
 
     public static void V01() {
@@ -99,7 +101,7 @@ public class Main {
         System.out.printf("Enter one more number: ");
         double treci = scanner.nextDouble();
         double total = prvi + drugi + treci;
-        double aver = total/3;
+        double aver = total / 3;
 
         System.out.println("The average of given numbers is: " + aver);
     }
@@ -111,15 +113,84 @@ public class Main {
         System.out.printf("Enter height: ");
         double h = scanner.nextDouble();
         double area = w * h;
-        double per = 2* (w+h);
+        double per = 2 * (w + h);
 
         System.out.println("The area is: " + area);
         System.out.println("The perimeter is: " + per);
 
     }
 
-    public static void V15() {
+    public static void V15() { //swaping variables
+        int a = 1;
+        int b = 2;
+        int temp = a;
+        a = b;
+        b = temp;
 
+        System.out.println(a);
+        System.out.println(b);
+    }
+
+    public static void V16() { //adding binary numbers
+        // Declare variables to store two binary numbers, an index, and a remainder
+        long binary1, binary2;
+        int i = 0, remainder = 0;
+
+        // Create an array to store the sum of binary digits
+        int[] sum = new int[20];
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input first binary number: ");
+        binary1 = in.nextLong();
+
+        System.out.print("Input second binary number: ");
+        binary2 = in.nextLong();
+
+        // Perform binary addition while there are digits in the binary numbers
+        while (binary1 != 0 || binary2 != 0) {
+            // Calculate the sum of binary digits and update the remainder
+            sum[i++] = (int) ((binary1 % 10 + binary2 % 10 + remainder) % 2);
+            remainder = (int) ((binary1 % 10 + binary2 % 10 + remainder) / 2);
+            binary1 = binary1 / 10;
+            binary2 = binary2 / 10;
+        }
+
+        // If there is a remaining carry, add it to the sum
+        if (remainder != 0) {
+            sum[i++] = remainder;
+        }
+
+        // Decrement the index to prepare for printing
+        --i;
+
+        // Display the sum of the two binary numbers
+        System.out.print("Sum of two binary numbers: ");
+        while (i >= 0) {
+            System.out.print(sum[i--]);
+        }
+
+        System.out.print("\n");
+    }
+
+    static void V32() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Input one integer: ");
+        int one = scanner.nextInt();
+        System.out.print("Input another integer: ");
+        int two = scanner.nextInt();
+
+        if (one > two) {
+            System.out.println(one + " > " + two);
+        }
+        if (one != two) {
+            System.out.println(one + " != " + two);
+        }
+        if (one < two) {
+            System.out.println(one + " < " + two);
+        }
+        if (one == two) {
+            System.out.println(one + "=" + two);
+        }
     }
 
 }

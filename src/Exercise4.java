@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Exercise4 {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please select an option by entering the number of the option:\n1.Reverse string output\n2.Is number even or odd\n3.Vokals count\n4.Calculate factorial");
         System.out.print("Number: ");
