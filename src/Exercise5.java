@@ -4,15 +4,14 @@ public class Exercise5 {
     }
 
     static void Fibonacci() {
-        int broj1 = 0;
-        int broj2 = 1;
-        int sum = 0;
-        while (true) {
-            for (int i = 0; i <= 20; i++) {
-                sum = sum + broj1 + broj2;
-                sum = broj2;
-
-            }
+        int count = 20;
+        int a = 0;
+        int b = 1;
+        for (int i = 0; i < count; i++) {
+            int sum = a + b;
+            System.out.print(sum + " ");
+            a = b;
+            b = sum;
         }
     }
 }
