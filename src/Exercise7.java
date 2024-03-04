@@ -1,8 +1,9 @@
-import java.util.Scanner;
+/*import java.util.Scanner;
 
 import static java.lang.System.*;
 
 public class Exercise7 {
+
     public static void main(String[] args) {
         //Tower();
         //Tower2();
@@ -16,7 +17,8 @@ public class Exercise7 {
         int z = 2;
         int sum;
 
-        for(int i=1; i<9; i++){
+
+        for(int i = 1; i<9; i++){
             sum = inp * z;
             out.println(STR."\{inp} * \{z} = \{sum}");
             inp = sum;
@@ -55,3 +57,4 @@ public class Exercise7 {
 
     }
 }
+*/

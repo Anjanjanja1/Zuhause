@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Exercise9 {
     public static void main(String[] args) {
@@ -7,7 +8,7 @@ public class Exercise9 {
         //array2();
         //array3();
         //array4();
-        //array5();
+        //array5();-moras skuziti kak random fukcionira
         //array6();
         //array7();
         //array8();
@@ -57,7 +58,8 @@ public class Exercise9 {
     }
 
     static void array5() { //dal je ovo dobro?
-        int[] num = {5, 7, 3, 9, 30, 10, 223, 45, 34, 212, 18, 90, 67, 96, 1};
+        Random random = new Random();
+        int[] num = new int[]{random.nextInt(100)};
         for (int i = 0; i < num.length; i++) {
             System.out.println("Number: " + num[i]);
         }

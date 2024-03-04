@@ -193,4 +193,12 @@ public class Main {
         }
     }
 
+    static void V33(){
+        //Write a Java program and compute the sum of an integer's digits.
+        //Input Data:
+        //Input an integer: 25
+        //Expected Output
+        //The sum of the digits is: 7
+    }
+
 }
