@@ -1,14 +1,15 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Exercise13 {
-
+    //to create a single Scanner object for reading input
+    private static final Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
         temperature();
 
     }
 
     public static void temperature() {
-        Scanner input = new Scanner(System.in);
         System.out.println("How many degrees is outside?");
         int temp = input.nextInt();
 
@@ -34,7 +35,7 @@ public class Exercise13 {
     }
 
     public static void weather(int temp) {
-        Scanner input = new Scanner(System.in);
+        
         System.out.println("And what is the weather like today? Sunny, cloudy or raining");
         String vreme = input.next().toLowerCase();
         switch (vreme) {
