@@ -14,6 +14,7 @@ public class Main {
         //V15();
         //V16();
         //V32();
+        //V33();
     }
 
     public static void V01() {
@@ -192,13 +193,15 @@ public class Main {
             System.out.println(one + "=" + two);
         }
     }
+    static void V33() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number with at least 2 digits: ");
+        int [] num = new int[]{input.nextInt()};
+        int[] sum = num.clone();
+        sum= num;
 
-    static void V33(){
-        //Write a Java program and compute the sum of an integer's digits.
-        //Input Data:
-        //Input an integer: 25
-        //Expected Output
-        //The sum of the digits is: 7
+        System.out.println("The sum of the digits is: " + sum);
     }
+
 
 }
