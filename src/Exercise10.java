@@ -9,7 +9,7 @@ public class Exercise10 {
         //test5();
         //test6();
         //test7();
-        loopic(2025, 2125);
+        //loopic(2025, 2125);
     }
 
     static void test1() {
