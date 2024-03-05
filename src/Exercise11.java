@@ -10,10 +10,8 @@ public class Exercise11 {
     public static void metode(int num){
         if (num%2==0){
             System.out.println(num+" is even.");
-        } else if(!(num%2==0)){
-            System.out.println(num+" is odd.");
         } else {
-            System.out.println("Invalid input.");
+            System.out.println(num+" is odd.");
         }
 
     }
