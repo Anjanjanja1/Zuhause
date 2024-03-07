@@ -10,13 +10,15 @@ public class Exercise19 {
     }
 
     public static void calc(int userNum) {
-        /*int num;
-        int[] arr = new int[100];
-        while (arr.length() >= num) {
-                if (num % userNum == 0)
-                    System.out.println(sum);
-            }
-        }*/
+        int jedan = 1;
+        int sto = 100;
+        while (jedan <= sto) {
+            if (jedan % userNum == 0)
+                System.out.print(jedan + " ");
+            jedan++;
+        }
+
     }
 }
+
 
