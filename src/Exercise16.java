@@ -33,14 +33,14 @@ public class Exercise16 {
     }
 
     public static void FtoC(double d) {
-        double cel= ((d - 32) / 1.8);
-        System.out.println(d+" Fahrenheit is "+cel+" Celsius.");
+        double cel = ((d - 32) / 1.8);
+        System.out.println(d + " Fahrenheit is " + String.format("%.2f", cel) + " Celsius.");
         Inp();
     }
 
     public static void CtoF(double d) {
-        double fah= ((d * 1.8) + 32);
-        System.out.println(d+" Celsius is "+fah+" Fahrenheit.");
+        double fah = ((d * 1.8) + 32);
+        System.out.println(d + " Celsius is " + String.format("%.2f", fah) + " Fahrenheit.");
         Inp();
     }
 

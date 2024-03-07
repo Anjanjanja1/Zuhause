@@ -2,7 +2,10 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
 
+
 public class Exercise9 {
+    private static final Scanner input = new Scanner(System.in);
+
     public static void main(String[] args) {
         //array1();
         //array2();
@@ -14,6 +17,13 @@ public class Exercise9 {
         //array8();
         //array9();
         //array10();
+        //array11();
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
+        //printArray(arr);
+        //isit(arr);
+        //System.out.println(isit2(arr, 39));
+        //System.out.println(suma(arr, 0));
+        //System.out.print(Arrays.toString(reverse(arr)));
     }
 
     static void array1() {
@@ -121,5 +131,95 @@ public class Exercise9 {
         float avg = sum / num.length;
         System.out.println("The average of this array is: " + avg);
     }
+
+    public static void array11() {
+        int[] array = new int[3];
+        array[0] = 4;
+        array[1] = 5;
+        array[2] = 6;
+
+        System.out.println(array); //kad ovak probas outputati- nebu funkcioniralo
+        System.out.println(Arrays.toString(array)); //moras tak outputati!
+
+        int[] arr = {4, 5, 6};
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+        for (int element : arr) { //to print all items in the array, literally: for each element in the array do this:
+            System.out.println(element + "");
+        }
+    }
+
+    public static void printArray(int[] numbers) {
+        for (int i = 0; i < numbers.length - 1; i++) {
+            System.out.println(numbers[i] + ", ");
+
+        }
+        System.out.println(numbers[numbers.length - 1]);
+
+        printArray2(numbers);
+    }
+
+    private static void printArray2(int[] numbers) {
+        String output = "";
+        for (int number : numbers) {
+            output = output.concat(number + ", ");
+            System.out.printf(number + ",");
+        }
+        System.out.println();
+        output = output.substring(0, output.length() - 2);
+        System.out.println(output);
+    }
+
+    private static void isit(int[] numbers) { //skipping one number (n)
+        System.out.println("Enter a number: ");
+        int n = input.nextInt();
+        for (int number : numbers) {
+            if (number == n) {
+                System.out.print(" ");
+            } else {
+                System.out.printf(number + ", ");
+            }
+        }
+    }
+
+    private static boolean isit2(int[] numbers, int n) { //looking for if a number given is in the array
+        for (int number : numbers) {
+            if (n == number) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /*private static int[] suma(int[] numbers, int sum) { //output sum of the whole array
+        for (int number : numbers) {
+            sum = sum + number; //sum+=i;
+        }
+        return sum;
+
+        for (int i = 0; i < numbers.length; i++) {
+            sum=sum+numbers[i];
+        }
+
+        int j = 0;
+        int number;
+        while (j<numbers.length) {
+            sum += numbers[j];
+            j++;
+        }
+        return sum;
+    }*/
+
+    public static int[] reverse(int [] arr) { //output an array from last element to the first
+        int[] array= new int[arr.length];
+        int count = 0;
+        for (int i=arr.length-1; i >= 0; i--){
+            array[count] =arr[i];
+            count++;
+        }
+        return array;
+    }
+
 }
 
