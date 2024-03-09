@@ -1,6 +1,6 @@
 public class Exercise23 {
     public static void main(String[] args) {
-        String palindrome = "anavolimilovana";
+        String palindrome = "ana";
         String reversed = "";
         for (int i = 0; i < palindrome.length(); i++) {
             reversed = palindrome.charAt(i) + reversed;
