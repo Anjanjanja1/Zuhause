@@ -200,7 +200,7 @@ public class Main {
         int[] sum = num.clone();
         sum= num;
 
-        System.out.println("The sum of the digits is: " + sum);
+        System.out.printl   n("The sum of the digits is: " + sum);
     }
 
 
